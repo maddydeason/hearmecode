@@ -115,5 +115,150 @@ SE = []
 range(5) #[0, 1, 2, 3, 4]
 	#range(start, stop)
 range(5,10) #[5, 6, 7, 8, 9]
+
 for number in range(10):
 	print number
+
+#FOR LOOP
+days = ['Monday', 'Tuesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+
+for day in days:
+	print day
+
+for week in range(1, 5): #range(1,5) = [1,2,3,4]
+	print 'Week {0}'.format(week)
+	# Week 1
+	# Week 2
+	# Week 3
+	# Week 4
+
+#NESTED FOR LOOPS
+	#lets combine our 2 for loops
+	#watch your indentation!!
+for week in range(1,5):
+	print "Week {0}".format(week)
+
+	for day in days:
+		print day
+		#- Week 1 -#
+		# Monday
+		# Tuesday
+		# Thursday
+		# Friday
+		# Saturday
+		# Sunday
+		#- Week 2 -#
+		# Monday
+		# Tuesday
+		# Thursday
+		# Friday
+		# Saturday
+		# Sunday
+		#- Week 3 -#
+		# Monday
+		# Tuesday
+		# Thursday
+		# Friday
+		# Saturday
+		# Sunday
+		#- Week 4 -#
+		# Monday
+		# Tuesday
+		# Thursday
+		# Friday
+		# Saturday
+		# Sunday
+
+#let's add months!
+for month in months: #remember, we aready defined months above
+	print month
+
+	for week in range (1, 5):
+		print 'Week {0}'.format(week)
+
+		for day in days:
+			print day
+			#== January ==#
+			#- Week 1 -#
+			# Monday
+			# Tuesday
+			# Thursday
+			# Friday
+			# Saturday
+			# Sunday
+			#- Week 2-#
+			# Monday
+			# Tuesday
+			# Thursday
+			# Friday
+			# Saturday
+			# Sunday
+			#- Week 3 -#
+			# Monday
+			# Tuesday
+			# Thursday
+			# Friday
+			# Saturday
+			# Sunday
+			#- Week 4 -#
+			# Monday
+			# Tuesday
+			# Thursday
+			# Friday
+			# Saturday
+			# Sunday
+			#== February ==#
+			#- Week 1 -#
+			# Monday
+			# Tuesday
+			# Thursday
+			# Friday
+			# Saturday
+			# Sunday
+			#- Week 2 - #
+			# etc, etc through December, you get the idea?
+
+#ENUMERATE
+	#enumertate() is a function that you use with a for loop to get the index(position) of that list item
+	#commonly used when you need to change each item in a list one at a time
+for each_attendee in attendees:
+	print "My name is {0}".format(each_attendee)
+
+for my_number, each_attendee in enumerate(attendees): 
+	print "My name is {0} and my number is {1}".format(each_attendee, my_number)
+	# My name is Shannon and my number is 0
+	# My name is Jenn and my number is 1
+	# My name is Grace and my number is 2
+
+#ZIP
+	#zip() is a function that you use with a for loop to use each item in multiple lists all at once
+listOne = ['Aye', 'Bee', 'See']
+listTwo = ['One', 'Two', 'Three']
+
+for listOne, listTwo in zip(listOne, listTwo):
+	print listOne, listTwo
+	# Aye One
+	# Bee Two
+	# See Three
+
+#WHILE
+	#while loops are the cousins of conditionals. like an if statement, while will ask: "Is this true?"
+bread = 5
+
+if bread >= 2:
+	print "I'm making a sandwhich"
+
+while bread >= 2:
+	print "I'm making a sandwhich"
+	bread = bread - 2 
+	# this will print "I'm making a sandwich" CONTINUOSLY until we reach less than 2 slices of bread. I have 5 slices of bread, so it will print twice.
+	# 5 - 2 = 3. 3 - 2 = 1. 1 is < 2 so the while loop stops
+else: 
+	print "I'm out of bread" #this will print when I reach less than 2 slices
+
+
+#Understand lists and loops now? go do some playtime exercises for practice!
+	# 99 bottles (Beginner): https://github.com/shannonturner/python-lessons/blob/master/playtime/lesson02_99bottles.py
+	# PBJ while (Beginner): https://github.com/shannonturner/python-lessons/blob/master/playtime/lesson02_pbj_while.py
+	# States (Intermediate): https://github.com/shannonturner/python-lessons/blob/master/playtime/lesson02_states.py
+	# Movies (Advanced): https://github.com/shannonturner/python-lessons/blob/master/playtime/lesson02_movies.py
